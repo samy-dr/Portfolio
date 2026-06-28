@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naira Purchasing Power Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <div class="forex-banner" id="usd-banner">
+            Global Valuation: <b>Loading USD Equivalency...</b>
+        </div>
+
+        <header>
+            <h1>Naira Purchasing Power Predictor 🇳🇬</h1>
+            <p>See exactly what your money bought in the past vs. today's estimations</p>
+        </header>
+
+        <div class="input-card">
+            <div class="form-group">
+                <label for="budget-input">Enter Your Budget (NGN):</label>
+                <input type="number" id="budget-input" value="10000" placeholder="e.g. 10000">
+            </div>
+
+            <div class="form-group">
+                <label for="item-select">Select a Commodity Item:</label>
+                <select id="item-select">
+                    <option value="bread">Loaf of Bread (Local Market Baseline)</option>
+                    <option value="rice">Bag of Rice (50kg Standard)</option>
+                    <option value="fuel">Fuel / Petrol (Per Litre Cost)</option>
+                    <option value="data">Mobile Data Package (1GB Allocation)</option>
+                    <option value="food">Plate of Food (Standard Restaurant)</option>
+                    <option value="movie">Cinema Movie Ticket</option>
+                    <option value="fees">School Fees Baseline (Per Term)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="comparison-grid">
+            <div class="result-card past">
+                <h3>What it Bought (2020)</h3>
+                <div class="quantity-display" id="past-quantity">0</div>
+                <p class="unit-label" id="past-unit">Units</p>
+            </div>
+
+            <div class="result-card present">
+                <h3>What it Buys (Current 2026 Estimate)</h3>
+                <div class="quantity-display" id="present-quantity">0</div>
+                <p class="unit-label" id="present-unit">Units</p>
+            </div>
+        </div>
+
+        <!-- New Visual Progress Bar Graphics Track Component Box -->
+        <div class="progress-section" style="margin-bottom: 30px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; color: var(--text-muted);">
+                <span>Remaining Value Strength</span>
+                <span id="strength-percentage">100%</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="power-bar"></div>
+            </div>
+        </div>
+
+        <div class="insight-box">
+            <p id="insight-text">Adjust your budget to trigger live purchasing power calculations.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

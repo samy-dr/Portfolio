@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Asset Crypto Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Live Crypto Asset Monitor</h1>
+            <p>Last Checked: <span id="timestamp">Synchronizing backend pipelines...</span></p>
+        </header>
+
+        <div class="control-panel" style="text-align: center; margin-bottom: 40px;">
+            <label for="currency-select" style="color: var(--text-muted); font-size: 1.1rem; margin-right: 10px;">Select Conversion Currency:</label>
+            <select id="currency-select" style="background: var(--card-bg); color: var(--text-main); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 6px; font-size: 1rem; cursor: pointer; outline: none;">
+                <option value="ngn">Nigerian Naira (NGN)</option>
+                <option value="eur">Euro (EUR)</option>
+            </select>
+        </div>
+
+        <!-- ROW 1: BITCOIN TRACKING ASSETS -->
+        <div class="price-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom: 30px;">
+            <div class="card btc">
+                <h3>Bitcoin (USD)</h3>
+                <div class="price" id="btc-usd">$0.00</div>
+            </div>
+            <div class="card">
+                <h3 id="btc-converted-label">Bitcoin (NGN)</h3>
+                <div class="price" id="btc-converted-price">₦0.00</div>
+            </div>
+        </div>
+
+        <!-- ROW 2: ETHEREUM TRACKING ASSETS -->
+        <div class="price-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom: 40px;">
+            <div class="card" style="border-left: 4px solid #8c8cde;">
+                <h3>Ethereum (USD)</h3>
+                <div class="price" id="eth-usd">$0.00</div>
+            </div>
+            <div class="card">
+                <h3 id="eth-converted-label">Ethereum (NGN)</h3>
+                <div class="price" id="eth-converted-price">₦0.00</div>
+            </div>
+        </div>
+
+        <div class="log-section">
+            <h2>System Operational Status</h2>
+            <p style="color: #2ec4b6;">✔ Pipeline Status: Active. Multi-asset parsing (BTC & ETH) successfully rendering.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
