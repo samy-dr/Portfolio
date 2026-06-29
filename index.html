@@ -3,73 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Software Engineering Portfolio</title>
+    <title>Apex Labs // Virtual Car Tuner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="portfolio-container">
-        <!-- Developer Profile Presentation Header Card -->
-        <header class="profile-header">
-            <div class="avatar-logo">💻</div>
-            <h1>Dzee's Developer Portfolio</h1>
-            <p>A collection of full-stack automated pipelines, background data processors, and interactive analytical web tools built natively from scratch.</p>
+    <div class="garage-wrapper">
+        <header>
+            <div class="logo-badge">STAGE // 2</div>
+            <h1>APEX LABS // AUTOMOTIVE CONFIGURATOR</h1>
+            <p>Simulate high-performance tuning modifications and blueprint your build configuration with zero financial risk</p>
         </header>
 
-        <!-- Dynamic Responsive Projects Showcase Grid Layout -->
-        <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
-            
-                        <!-- CARD 1: BITCOIN LIVE REAL-TIME MONITOR -->
-            <div class="project-card">
-                <div class="card-icon">⚡</div>
-                <h3>Live Bitcoin Price Monitor</h3>
-                <p>An automated background execution pipeline that securely bypasses local network blockades to scrape live financial data matrices and log timestamped history packages to disk memory continuously.</p>
-                <div class="tech-stack">
-                    <span>Python Backend</span> <span>BeautifulSoup4</span> <span>Data JSON Pipelines</span> <span>Automated Loops</span>
-                </div>
-                <!-- Add this link button below to complete the alignment balance -->
-                <a href="crypto_log.txt" class="launch-btn" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); border: 1px solid var(--border-glow); box-shadow: none;">View System Logs 📋</a>
+        <!-- Live Telemetry Stats Dashboard Row Tracker -->
+        <div class="telemetry-panel">
+            <div class="stat-node">
+                <span class="stat-title">Engine Output</span>
+                <div class="stat-value"><span id="stat-hp">300</span> <small>HP</small></div>
             </div>
-
-
-            <!-- CARD 2: NAIRA PURCHASING POWER CALCULATOR ENGINE -->
-            <div class="project-card">
-                <div class="card-icon">🇳🇬</div>
-                <h3>Naira Purchasing Power Predictor</h3>
-                <p>An interactive, data-driven analytical tool that computes economic commodity depreciation over key time intervals. Features real-time international forex tracking values and live animated progress metrics.</p>
-                <div class="tech-stack">
-                    <span>JavaScript (ES6)</span> <span>HTML5 Form Data</span> <span>CSS Progress Animations</span> <span>Dynamic Pricing Matrix</span>
-                </div>
-                <a href="Naira Predictor/index.html" class="launch-btn">Launch Predictor Engine 📈</a>
+            <div class="stat-node">
+                <span class="stat-title">Peak Torque</span>
+                <div class="stat-value"><span id="stat-tq">350</span> <small>Nm</small></div>
             </div>
-            
-            <!-- CARD 3: REAL-TIME DAILY EXPENSE TRACKER -->
-            <div class="project-card">
-                <div class="card-icon">💸</div>
-                <h3>Daily Expense Tracker & Budget Gauge</h3>
-                <p>A full-stack personal finance engine tracking daily spending thresholds. Features real-time state management, adaptive progress bars, and localized storage persistence.</p>
-                <div class="tech-stack">
-                    <span>JavaScript (ES6)</span> <span>LocalStorage</span> <span>Financial Math Arrays</span> <span>CSS UI Themes</span>
-                </div>
-                <a href="Expense Tracker/index.html" class="launch-btn" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);">Launch Tracker ➕</a>
+            <div class="stat-node">
+                <span class="stat-title">Total Mass</span>
+                <div class="stat-value"><span id="stat-wt">1,450</span> <small>KG</small></div>
             </div>
-
-                        <!-- CARD 4: VIRTUAL AUTOMOTIVE CONFIGURATOR -->
-            <div class="project-card">
-                <div class="card-icon">🏎️</div>
-                <h3>Dzee Labs // Automotive Configurator</h3>
-                <p>A modern, high-performance digital tuning sandbox blueprinting mechanical vehicle setups. Features physics-based power-to-weight acceleration logic and responsive SVG outline vector models.</p>
-                <div class="tech-stack">
-                    <span>JavaScript (ES6)</span> <span>Automotive Math Matrix</span> <span>Cyberpunk UI Themes</span> <span>Scalable Vector Graphics</span>
-                </div>
-                <a href="Car Tuner/index.html" class="launch-btn" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);">Launch Configurator 🔧</a>
+            <div class="stat-node">
+                <span class="stat-title">0-100 KM/H</span>
+                <div class="stat-value" style="color: #06b6d4;"><span id="stat-acc">5.2</span> <small>SEC</small></div>
             </div>
-
-
         </div>
 
-        <footer>
-            <p>Engineered with and AI Collaboration | Upcoming Graduation: July 24th, 2026</p>
-        </footer>
+        <div class="workspace-grid">
+            <!-- Left Panel Column: Tuning Bay Controls Matrix -->
+            <div class="control-panel flex-column">
+                <h2><span class="panel-icon">🔧</span> MODIFICATION BAY</h2>
+                
+                <div class="tuning-group">
+                    <label for="chassis-select">Select Base Project Platform:</label>
+                    <select id="chassis-select">
+                        <option value="jdm">🇯🇵 Precision Inline-4 Turbo (JDM Platform)</option>
+                        <option value="euro">🇩🇪 Twin-Turbo V6 Euro Muscle (Euro Platform)</option>
+                        <option value="usdm">🇺🇸 Naturally Aspirated V8 Block (USDM Platform)</option>
+                    </select>
+                </div>
+
+                <div class="tuning-group">
+                    <label for="ecu-select">Engine Control Unit (ECU Computer Mapping):</label>
+                    <select id="ecu-select">
+                        <option value="stock">Factory Stock Tune Mapping</option>
+                        <option value="stage1">Stage 1 Flash Performance Map (+15% HP)</option>
+                        <option value="stage2">Stage 2 Custom Dyno Calibration (+35% HP)</option>
+                    </select>
+                </div>
+
+                <div class="tuning-group">
+                    <div class="slider-header">
+                        <label for="boost-slider">Turbocharger Boost Level:</label>
+                        <span class="slider-readout" id="boost-readout">0.8 BAR</span>
+                    </div>
+                    <input type="range" id="boost-slider" min="0.5" max="2.5" step="0.1" value="0.8">
+                </div>
+
+                <div class="tuning-group">
+                    <div class="slider-header">
+                        <label for="weight-slider">Weight Reduction (Carbon Fiber Panels):</label>
+                        <span class="slider-readout" id="weight-readout">0 KG Stripped</span>
+                    </div>
+                    <input type="range" id="weight-slider" min="0" max="300" step="10" value="0">
+                </div>
+
+                <div class="tuning-group">
+                    <label for="tire-select">Performance Compound Tires:</label>
+                    <select id="tire-select">
+                        <option value="street">Factory All-Season Street Tires</option>
+                        <option value="sport">Semi-Slick Sport Compounds (Improves Launch)</option>
+                        <option value="track">Full Track Slicks (Maximum Traction)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Right Panel Column: Interactive Blueprint Render Visualizer Canvas Window -->
+            <div class="render-panel flex-column">
+                <h2><span class="panel-icon">📐</span> MULTI-ANGLE SCHEMATIC PERSPECTIVE</h2>
+                <div class="blueprint-canvas-box" style="height: 380px;">
+                    
+                    <div class="blueprint-quad-matrix">
+                        
+                        <!-- QUADRANT 1: FRONT PROFILE -->
+                        <div class="quadrant-card">
+                            <svg class="car-blueprint-render" viewBox="0 0 200 100" xmlns="http://w3.org" stroke="#06b6d4" fill="none" stroke-width="1.5">
+                                <path d="M40,70 L25,68 L20,65 L25,60 L40,60 L55,48 L75,46 L125,46 L145,48 L160,60 L175,60 L180,65 L175,68 L160,70 Z" />
+                                <path d="M55,48 L70,26 L130,26 L145,48 M70,26 L130,26" opacity="0.5" />
+                                <path d="M35,60 L50,57 L150,57 L165,60" />
+                                <rect x="30" y="62" width="22" height="5" rx="1" stroke="#f97316" />
+                                <rect x="148" y="62" width="22" height="5" rx="1" stroke="#f97316" />
+                            </svg>
+                            <span class="quad-label">FACIAL ELEVATION // FRONT</span>
+                        </div>
+
+                        <!-- QUADRANT 2: SIDE PROFILE LEFT -->
+                        <div class="quadrant-card">
+                            <svg class="car-blueprint-render" viewBox="0 0 200 100" xmlns="http://w3.org" stroke="#06b6d4" fill="none" stroke-width="1.5">
+                                <path d="M15,68 L25,66 L45,50 Q70,48 90,30 L140,30 Q165,53 185,66 L190,68 L175,68 Q170,56 155,56 Q140,56 135,68 L65,68 Q60,56 45,56 Q30,56 25,68 Z" />
+                                <circle cx="45" cy="68" r="10" />
+                                <circle cx="155" cy="68" r="10" />
+                                <path d="M175,56 L190,46 L188,42 Z" stroke="#f97316" />
+                            </svg>
+                            <span class="quad-label">LATERAL PROFILE // LEFT</span>
+                        </div>
+
+                        <!-- QUADRANT 3: SIDE PROFILE RIGHT -->
+                        <div class="quadrant-card">
+                            <svg class="car-blueprint-render" viewBox="0 0 200 100" xmlns="http://w3.org" stroke="#06b6d4" fill="none" stroke-width="1.5">
+                                <path d="M185,68 L175,66 L155,50 Q130,48 110,30 L60,30 Q35,53 15,66 L10,68 L25,68 Q30,56 45,56 Q60,56 65,68 L135,68 Q140,56 155,56 Q170,56 175,68 Z" />
+                                <circle cx="155" cy="68" r="10" />
+                                <circle cx="45" cy="68" r="10" />
+                                <path d="M25,56 L10,46 L12,42 Z" stroke="#f97316" />
+                            </svg>
+                            <span class="quad-label">LATERAL PROFILE // RIGHT</span>
+                        </div>
+
+                        <!-- QUADRANT 4: REAR PROFILE -->
+                        <div class="quadrant-card">
+                            <svg class="car-blueprint-render" viewBox="0 0 200 100" xmlns="http://w3.org" stroke="#06b6d4" fill="none" stroke-width="1.5">
+                                <path d="M40,68 L30,68 L25,65 L30,52 L45,49 L65,30 L135,30 L155,49 L170,52 L175,65 L170,68 L160,68 Z" />
+                                <path d="M65,30 L80,49 L120,49 L135,30" opacity="0.5" />
+                                <path d="M30,52 L170,52" />
+                                <circle cx="85" cy="63" r="2" fill="#f97316" stroke="none" />
+                                <circle cx="92" cy="63" r="2" fill="#f97316" stroke="none" />
+                                <circle cx="108" cy="63" r="2" fill="#f97316" stroke="none" />
+                                <circle cx="115" cy="63" r="2" fill="#f97316" stroke="none" />
+                            </svg>
+                            <span class="quad-label">AERO DIFFUSER // REAR</span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="scanner-line"></div>
+                    <div class="blueprint-grid-lines"></div>
+                </div>
+                <div class="build-summary-card">
+                    <h3>CONFIGURATION SUMMARY:</h3>
+                    <p id="summary-text">Select mechanical adjustments to compute your blueprint mapping metrics safely.</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
