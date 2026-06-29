@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZEE LABS // Virtual Car Tuner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="garage-wrapper">
+        <header>
+            <div class="logo-badge">STAGE // 2</div>
+            <h1>DZEE LABS // AUTOMOTIVE CONFIGURATOR</h1>
+            <p>Simulate high-performance tuning modifications and blueprint your build configuration with zero financial risk</p>
+        </header>
+
+        <!-- Live Telemetry Stats Dashboard Row Tracker -->
+        <div class="telemetry-panel">
+            <div class="stat-node">
+                <span class="stat-title">Engine Output</span>
+                <div class="stat-value"><span id="stat-hp">300</span> <small>HP</small></div>
+            </div>
+            <div class="stat-node">
+                <span class="stat-title">Peak Torque</span>
+                <div class="stat-value"><span id="stat-tq">350</span> <small>Nm</small></div>
+            </div>
+            <div class="stat-node">
+                <span class="stat-title">Total Mass</span>
+                <div class="stat-value"><span id="stat-wt">1,450</span> <small>KG</small></div>
+            </div>
+            <div class="stat-node">
+                <span class="stat-title">0-100 KM/H</span>
+                <div class="stat-value" style="color: #06b6d4;"><span id="stat-acc">5.2</span> <small>SEC</small></div>
+            </div>
+        </div>
+
+        <div class="workspace-grid">
+            <!-- Left Panel Column: Tuning Bay Controls Matrix -->
+            <div class="control-panel flex-column">
+                <h2><span class="panel-icon">🔧</span> MODIFICATION BAY</h2>
+                
+                <div class="tuning-group">
+                    <label for="chassis-select">Select Base Project Platform:</label>
+                    <select id="chassis-select">
+                        <option value="jdm">🇯🇵 Precision Inline-4 Turbo (JDM Platform)</option>
+                        <option value="euro">🇩🇪 Twin-Turbo V6 Euro Muscle (Euro Platform)</option>
+                        <option value="usdm">🇺🇸 Naturally Aspirated V8 Block (USDM Platform)</option>
+                    </select>
+                </div>
+
+                <div class="tuning-group">
+                    <label for="ecu-select">Engine Control Unit (ECU Computer Mapping):</label>
+                    <select id="ecu-select">
+                        <option value="stock">Factory Stock Tune Mapping</option>
+                        <option value="stage1">Stage 1 Flash Performance Map (+15% HP)</option>
+                        <option value="stage2">Stage 2 Custom Dyno Calibration (+35% HP)</option>
+                    </select>
+                </div>
+
+                <div class="tuning-group">
+                    <div class="slider-header">
+                        <label for="boost-slider">Turbocharger Boost Level:</label>
+                        <span class="slider-readout" id="boost-readout">0.8 BAR</span>
+                    </div>
+                    <input type="range" id="boost-slider" min="0.5" max="2.5" step="0.1" value="0.8">
+                </div>
+
+                <div class="tuning-group">
+                    <div class="slider-header">
+                        <label for="weight-slider">Weight Reduction (Carbon Fiber Panels):</label>
+                        <span class="slider-readout" id="weight-readout">0 KG Stripped</span>
+                    </div>
+                    <input type="range" id="weight-slider" min="0" max="300" step="10" value="0">
+                </div>
+
+                <div class="tuning-group">
+                    <label for="tire-select">Performance Compound Tires:</label>
+                    <select id="tire-select">
+                        <option value="street">Factory All-Season Street Tires</option>
+                        <option value="sport">Semi-Slick Sport Compounds (Improves Launch)</option>
+                        <option value="track">Full Track Slicks (Maximum Traction)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Right Panel Column: Interactive Blueprint Render Visualizer Canvas Window -->
+            <div class="render-panel flex-column">
+                <h2><span class="panel-icon">📐</span> MULTI-ANGLE SCHEMATIC PERSPECTIVE</h2>
+                <div class="blueprint-canvas-box" style="height: 380px;"> <!-- Expanded canvas room to house our multi-grid items -->
+                    
+                                                            <!-- MASTER COMPOSITE HIGH-DEFINITION ENGINEERING GRID -->
+                    <div class="blueprint-quad-matrix">
+                        
+                        <!-- QUADRANT 1: FRONT PROFILE -->
+                        <div class="quadrant-card">
+                            <div class="car-blueprint-render front-view"></div>
+                            <span class="quad-label">FACIAL ELEVATION // FRONT</span>
+                        </div>
+
+                        <!-- QUADRANT 2: SIDE PROFILE LEFT -->
+                        <div class="quadrant-card">
+                            <div class="car-blueprint-render side-left-view"></div>
+                            <span class="quad-label">LATERAL PROFILE // LEFT</span>
+                        </div>
+
+                        <!-- QUADRANT 3: SIDE PROFILE RIGHT -->
+                        <div class="quadrant-card">
+                            <div class="car-blueprint-render side-right-view"></div>
+                            <span class="quad-label">LATERAL PROFILE // RIGHT</span>
+                        </div>
+
+                        <!-- QUADRANT 4: REAR PROFILE -->
+                        <div class="quadrant-card">
+                            <div class="car-blueprint-render rear-view"></div>
+                            <span class="quad-label">AERO DIFFUSER // REAR</span>
+                        </div>
+                        
+                    </div>
+
+
+
+                    <div class="scanner-line"></div>
+                    <!-- Hidden overlay indicators to avoid canvas cluttering -->
+                    <div class="wireframe-ring" id="ring-back"></div>
+                    <div class="wireframe-ring" id="ring-front"></div>
+                    <div class="blueprint-grid-lines"></div>
+                </div>
+                <div class="build-summary-card">
+                    <h3>CONFIGURATION SUMMARY:</h3>
+                    <p id="summary-text">Select mechanical adjustments to compute your blueprint mapping metrics safely.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
