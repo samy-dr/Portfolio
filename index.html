@@ -12,8 +12,48 @@
         <header class="profile-header">
             <div class="avatar-logo">💻</div>
             <h1>Dzee's Developer Portfolio</h1>
+            <div id="live-clock" style="display: inline-block; margin: 10px 0; padding: 5px 15px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 50px; font-size: 0.85rem; color: #94a3b8; font-family: 'Inter', sans-serif;"></div>
             <p>A collection of full-stack automated pipelines, background data processors, and interactive analytical web tools built natively from scratch.</p>
+            <script>
+                function runHeaderClock() {
+                    const clockElement = document.getElementById('live-clock');
+                    const update = () => {
+                        const now = new Date();
+                        const dateString = now.toLocaleDateString('en-US', {
+                            weekday: 'long',
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        });
+                        const timeString = now.toLocaleTimeString('en-US', {
+                            hour: 'numeric',
+                            minute: '2-digit',
+                            second: '2-digit',
+                            hour12: true
+                        });
+                        clockElement.textContent = `${dateString} — ${timeString}`;
+                    };
+                    setInterval(update, 1000);
+                    update();
+                }
+                runHeaderClock();
+            </script>
         </header>
+
+        <script>
+            function updateLiveClock() {
+                const now = new Date();
+                const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                const timeOptions = { hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true };
+
+                const dateString = now.toLocaleDateString('en-US', dateOptions);
+                const timeString = now.toLocaleTimeString('en-US', timeOptions);
+
+                document.getElementById('live-clock').textContent = `${dateString} — ${timeString}`;
+            }
+            setInterval(updateLiveClock, 1000);
+            updateLiveClock();
+        </script>
 
         <!-- Dynamic Responsive Projects Showcase Grid Layout -->
         <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">

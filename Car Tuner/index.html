@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DZEE Labs // Virtual Car Tuner</title>
+    <title>Apex Labs // Virtual Car Tuner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="garage-wrapper">
         <header>
             <div class="logo-badge">STAGE // 2</div>
-            <h1>DZEE LABS // AUTOMOTIVE CONFIGURATOR</h1>
+            <h1>APEX LABS // AUTOMOTIVE CONFIGURATOR</h1>
             <p>Simulate high-performance tuning modifications and blueprint your build configuration with zero financial risk</p>
         </header>
 
@@ -30,10 +30,11 @@
             </div>
             <div class="stat-node">
                 <span class="stat-title">0-100 KM/H</span>
-                <div class="stat-value" style="color: #06b6d4;"><span id="stat-acc">5.2</span> <small>SEC</small></div>
+                <div class="stat-value" style="color: #60a5fa;"><span id="stat-acc">5.2</span> <small>SEC</small></div>
             </div>
         </div>
 
+        <!-- Split Grid Workspace Panel Container -->
         <div class="workspace-grid">
             <!-- Left Panel Column: Tuning Bay Controls Matrix -->
             <div class="control-panel flex-column">
@@ -57,6 +58,7 @@
                     </select>
                 </div>
 
+                <!-- Range Sliders for Mechanical Handling Adjustments -->
                 <div class="tuning-group">
                     <div class="slider-header">
                         <label for="boost-slider">Turbocharger Boost Level:</label>
@@ -85,62 +87,12 @@
 
             <!-- Right Panel Column: Interactive Blueprint Render Visualizer Canvas Window -->
             <div class="render-panel flex-column">
-                <h2><span class="panel-icon">📐</span> MULTI-ANGLE SCHEMATIC PERSPECTIVE</h2>
-                <div class="blueprint-canvas-box" style="height: 380px;">
-                    
-                    <div class="blueprint-quad-matrix">
-                        
-                        <!-- QUADRANT 1: FRONT PROFILE -->
-                        <div class="quadrant-card">
-                            <svg class="car-blueprint-render" viewBox="0 0 200 100" xmlns="http://w3.org" stroke="#06b6d4" fill="none" stroke-width="1.5">
-                                <path d="M40,70 L25,68 L20,65 L25,60 L40,60 L55,48 L75,46 L125,46 L145,48 L160,60 L175,60 L180,65 L175,68 L160,70 Z" />
-                                <path d="M55,48 L70,26 L130,26 L145,48 M70,26 L130,26" opacity="0.5" />
-                                <path d="M35,60 L50,57 L150,57 L165,60" />
-                                <rect x="30" y="62" width="22" height="5" rx="1" stroke="#f97316" />
-                                <rect x="148" y="62" width="22" height="5" rx="1" stroke="#f97316" />
-                            </svg>
-                            <span class="quad-label">FACIAL ELEVATION // FRONT</span>
-                        </div>
-
-                        <!-- QUADRANT 2: SIDE PROFILE LEFT -->
-                        <div class="quadrant-card">
-                            <svg class="car-blueprint-render" viewBox="0 0 200 100" xmlns="http://w3.org" stroke="#06b6d4" fill="none" stroke-width="1.5">
-                                <path d="M15,68 L25,66 L45,50 Q70,48 90,30 L140,30 Q165,53 185,66 L190,68 L175,68 Q170,56 155,56 Q140,56 135,68 L65,68 Q60,56 45,56 Q30,56 25,68 Z" />
-                                <circle cx="45" cy="68" r="10" />
-                                <circle cx="155" cy="68" r="10" />
-                                <path d="M175,56 L190,46 L188,42 Z" stroke="#f97316" />
-                            </svg>
-                            <span class="quad-label">LATERAL PROFILE // LEFT</span>
-                        </div>
-
-                        <!-- QUADRANT 3: SIDE PROFILE RIGHT -->
-                        <div class="quadrant-card">
-                            <svg class="car-blueprint-render" viewBox="0 0 200 100" xmlns="http://w3.org" stroke="#06b6d4" fill="none" stroke-width="1.5">
-                                <path d="M185,68 L175,66 L155,50 Q130,48 110,30 L60,30 Q35,53 15,66 L10,68 L25,68 Q30,56 45,56 Q60,56 65,68 L135,68 Q140,56 155,56 Q170,56 175,68 Z" />
-                                <circle cx="155" cy="68" r="10" />
-                                <circle cx="45" cy="68" r="10" />
-                                <path d="M25,56 L10,46 L12,42 Z" stroke="#f97316" />
-                            </svg>
-                            <span class="quad-label">LATERAL PROFILE // RIGHT</span>
-                        </div>
-
-                        <!-- QUADRANT 4: REAR PROFILE -->
-                        <div class="quadrant-card">
-                            <svg class="car-blueprint-render" viewBox="0 0 200 100" xmlns="http://w3.org" stroke="#06b6d4" fill="none" stroke-width="1.5">
-                                <path d="M40,68 L30,68 L25,65 L30,52 L45,49 L65,30 L135,30 L155,49 L170,52 L175,65 L170,68 L160,68 Z" />
-                                <path d="M65,30 L80,49 L120,49 L135,30" opacity="0.5" />
-                                <path d="M30,52 L170,52" />
-                                <circle cx="85" cy="63" r="2" fill="#f97316" stroke="none" />
-                                <circle cx="92" cy="63" r="2" fill="#f97316" stroke="none" />
-                                <circle cx="108" cy="63" r="2" fill="#f97316" stroke="none" />
-                                <circle cx="115" cy="63" r="2" fill="#f97316" stroke="none" />
-                            </svg>
-                            <span class="quad-label">AERO DIFFUSER // REAR</span>
-                        </div>
-                        
-                    </div>
-
-                    <div class="scanner-line"></div>
+                <h2><span class="panel-icon">📐</span> SCHEMATIC BLUEPRINT VIEW</h2>
+                <div class="blueprint-canvas-box">
+                    <!-- Vector Chassis Graphics Matrix Overlay Ring Elements -->
+                    <div class="wireframe-ring" id="ring-back"></div>
+                    <div class="wireframe-ring" id="ring-front"></div>
+                    <div class="chassis-car-vector" id="car-vector-silhouette">🏎️</div>
                     <div class="blueprint-grid-lines"></div>
                 </div>
                 <div class="build-summary-card">

@@ -69,15 +69,20 @@ body {
 }
 
 .project-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-glow);
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.05), transparent), var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(12px);
-    transition: transform 0.3s, border-color 0.3s;
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.25);
 }
 
 .project-card:hover {

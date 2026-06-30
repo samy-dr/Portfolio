@@ -197,24 +197,12 @@ input[type="range"] {
     z-index: 1;
 }
 
-.car-blueprint-svg {
-    position: absolute;
-    width: 95%; /* Expanded width for multi-quadrant scannability */
-    height: 90%;
+.chassis-car-vector {
+    font-size: 6rem;
     z-index: 5;
-    filter: drop-shadow(0 0 6px rgba(6, 182, 212, 0.4));
-    transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.4));
 }
-
-
-.car-blueprint-svg.active {
-    display: block;
-}
-
-#svg-jdm {
-    filter: drop-shadow(0 0 12px rgba(6, 182, 212, 0.6));
-}
-
 
 /* Neon Blueprint Glow Rings Simulation Elements Layout Shapes Rules */
 .wireframe-ring {
@@ -251,70 +239,4 @@ input[type="range"] {
     font-size: 0.92rem;
     color: #cbd5e1;
     line-height: 1.5;
-}
-
-/* Premium Quad Matrix Blueprint Layout Configuration */
-.blueprint-quad-matrix {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 15px;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 5;
-    box-sizing: border-box;
-    padding: 10px;
-}
-
-.quadrant-card {
-    background: rgba(6, 10, 18, 0.7);
-    border: 1px solid rgba(6, 182, 212, 0.15);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 10px;
-    overflow: hidden;
-}
-
-.quad-label {
-    position: absolute;
-    bottom: 8px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: rgba(6, 182, 212, 0.6);
-    letter-spacing: 1px;
-    font-family: monospace;
-}
-
-/* High-Definition High-Accuracy Car Silhouettes */
-.car-blueprint-render {
-    width: 80%;
-    height: auto;
-    max-height: 90px;
-    filter: drop-shadow(0 0 6px rgba(6, 182, 212, 0.6));
-    opacity: 0.9;
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Dynamic scanning laser row bar */
-.scanner-line {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, var(--neon-cyan), transparent);
-    box-shadow: 0 0 10px var(--neon-cyan);
-    z-index: 8;
-    animation: sweepScanner 4s ease-in-out infinite;
-}
-
-@keyframes sweepScanner {
-    0% { left: 5%; }
-    50% { left: 95%; }
-    100% { left: 5%; }
 }
